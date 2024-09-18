@@ -1,0 +1,31 @@
+From 7528534ae0d016d7126d180de7112bb8b98cedb5 Mon Sep 17 00:00:00 2001
+From: wjyrich <1071633242@qq.com>
+Date: Fri, 13 Sep 2024 15:01:57 +0800
+Subject: [PATCH] install
+
+---
+ conf.pri | 6 ++----
+ 1 file changed, 2 insertions(+), 4 deletions(-)
+
+diff --git a/conf.pri b/conf.pri
+index 637fcc9..93c3174 100644
+--- a/conf.pri
++++ b/conf.pri
+@@ -5,12 +5,10 @@ OBJECTS_DIR = .obj
+ UI_DIR = .ui
+ RCC_DIR = .rcc
+ 
+-INCLUDEPATH += $$UI_DIR $$MOC_DIR $$RCC_DIR
++INCLUDEPATH += $$UI_DIR $$MOC_DIR $$RCC_DIR  $$PREFIX/include
++
+ 
+ 
+-isEmpty(PREFIX) {
+-    PREFIX = /usr/local
+-}
+ 
+ BINDIR = $$PREFIX/bin
+ DATADIR = $$PREFIX/share/qomp
+-- 
+2.43.4
+
